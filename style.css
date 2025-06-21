@@ -63,8 +63,17 @@ nav {
 .logo {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #00bfff; /* Blue border */
+    box-shadow: 0 0 10px #00bfff; /* Blue glow */
+    object-fit: cover;
 }
 
 .nav-bar {
@@ -218,35 +227,44 @@ nav {
 }
 
 .project-description p {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
-.view-details-btn {
-    background-color: var(--accent-color);
-    color: white;
+.project-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.view-details-btn, .btn {
+    background-color: #00bfff;
+    color: #ffffff;
+    padding: 10px 20px;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
     transition: background-color 0.3s ease;
-    align-self: flex-start;
 }
 
-.view-details-btn:hover {
-    background-color: var(--accent-hover);
+.view-details-btn:hover, .btn:hover {
+    background-color: #009acd;
 }
 
 .project-details {
     display: none;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid #333;
     overflow: hidden;
     transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
     max-height: 0;
     opacity: 0;
+    padding: 20px;
 }
 
 .project-details.active {
@@ -261,7 +279,7 @@ nav {
 
 .details-section h4 {
     color: var(--accent-color);
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
     font-size: 1.2rem;
 }
 
@@ -325,6 +343,16 @@ nav {
 
 .hide-details-btn:hover {
     background-color: var(--accent-hover);
+}
+
+.advantage-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.advantage-item i {
+    margin-right: 10px;
 }
 
 /* Responsive Design */
